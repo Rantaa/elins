@@ -241,11 +241,11 @@ function sendPush(){
 
 function sendPush() {
       Email.send({
-        Host: "smtp.gmail.com",
-        Username: "lo.ranta86@gmail.com.com",
+        Host: "'Smtp.gmail.com",
+        Username: "lo.ranta86@gmail.com",
         Password: "buffalojunior",
-        To: 'lo.ranta86@gmail.com.com',
-        From: "lo.ranta86@gmail.com.com",
+        To: 'lo.ranta86@gmail.com',
+        From: "lo.ranta86@gmail.com",
         Subject: "HELP",
         Body: "Shit is hitting Catrins fan!",
       })
@@ -253,6 +253,20 @@ function sendPush() {
           alert("I've been notified darling, will call as soon as I can! Kisses")
         });
     }
+
+var twilio = require('twilio');
+
+// Find your account sid and auth token in your Twilio account Console.
+var client = new twilio('AC0c3f0a0aadceb980f07a1aabcd46b556', '8832f893fefa77b4d545c470d9a1ee09');
+
+// Send the text message.
+function sendPush() {
+	client.messages.create({
+		to: '+46763194849',
+		from: 'YOUR_TWILIO_NUMBER',
+		body: 'Hello from Twilio!'
+	});
+}
 
 // Replace placeholder texts and urls with your own values:
 
