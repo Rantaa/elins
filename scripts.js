@@ -254,11 +254,6 @@ function sendPush() {
         });
     }
 
-var twilio = require('twilio');
-
-// Find your account sid and auth token in your Twilio account Console.
-var client = new twilio('AC0c3f0a0aadceb980f07a1aabcd46b556', '8832f893fefa77b4d545c470d9a1ee09');
-
 // Replace placeholder texts and urls with your own values:
 
 //https://joinjoaomgcd.appspot.com/_ah/api/messaging/v1/sendPush?
