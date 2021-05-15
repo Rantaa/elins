@@ -217,7 +217,7 @@ function pausePlayer(){
 	playing = false;
 }
 
-
+/*
 function sendPush(){
 	let push = {
 		"active": "true",
@@ -237,7 +237,22 @@ function sendPush(){
 	         beforeSend: function(xhr){xhr.setRequestHeader('Access-Token', 'o.TWdGpN5eMfbFJ6aex5vjmgd9A2qsX6IT').setRequestHeader('Content-Type','application/json');},
 	         success: function() { alert("I've been notified darling, will call as soon as I can! Kisses"); }
 	      });
-}
+}*/
+
+function sendPush() {
+      Email.send({
+        Host: "smtp.gmail.com",
+        Username: "lo.ranta86@gmail.com.com",
+        Password: "buffalojunior",
+        To: 'lo.ranta86@gmail.com.com',
+        From: "lo.ranta86@gmail.com.com",
+        Subject: "HELP",
+        Body: "Shit is hitting Catrins fan!",
+      })
+        .then(function (message) {
+          alert("I've been notified darling, will call as soon as I can! Kisses")
+        });
+    }
 
 // Replace placeholder texts and urls with your own values:
 
