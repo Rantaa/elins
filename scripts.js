@@ -12,14 +12,13 @@ let currentFunnyIndex = 0;
 let playing = false;
 
 
-let songs = ["John Mayer - XO.mp3",
-"Disclosure - Latch.mp3",
-"Calvin Harris - How Deep Is Your Love.mp3",
-"Justin Bieber - Where Are You Now.mp3",
-"The Weeknd - Can't Feel My Face.mp3",
-"feel-my-face.mp3"];
+let songs = ["Tom Walker - Better Half of Me.mp3",
+"Brett Young - In Case You Didnt Know.mp3",
+"Ben Howard - Only Love.mp3",
+"Hearts & Colors - Cant Help Falling In Love.mp3",
+"Tatiana Manaois - Helplessly.mp3"];
 
-let funnies = ["Muriel Gifford's Sea shells .aac",
+/*let funnies = ["Muriel Gifford's Sea shells .aac",
 "belly scratches.aac",
 "circumcision.aac",
 "five for a sixer.aac",
@@ -31,7 +30,7 @@ let funnies = ["Muriel Gifford's Sea shells .aac",
 "morning sitcom.aac",
 "nobody needs knickers! .aac",
 "one-armed man.aac",
-"satisfying piss.aac"]
+"satisfying piss.aac"] */
 
 
 $(document).ready(()=>{
@@ -54,7 +53,7 @@ function handleBold(el){
 function playSong(el){
 
 	currentMediaType = 'song'
-	console.log("Erin wants to play a song");
+	console.log("Catrin wants to play a song");
 
 	handleBold(el)
 
@@ -71,7 +70,7 @@ function playSong(el){
 	controls.show();
 }
 
-function playFunnyTime(el){
+/*function playFunnyTime(el){
 	console.log("erin wants to play a funny time");
 
 	currentMediaType = "funny"
@@ -88,12 +87,24 @@ function playFunnyTime(el){
 
 	player.attr('src', "funnytimes/"+funnies[currentFunnyIndex]);
 	
+}*/
+
+function playFunnyTime(el){
+	console.log("Catrin is trying to sneek peak");
+	handleBold(el)
+	mediaType.text('Ah, do your\'e trying to sneak peek on the details of the upcoming engagement? Well, I won\'t let you... yet ;) !')
+
+	player[0].pause()
+
+	nowPlaying.text('')
+
+	controls.hide()
 }
 
 function freakout(el){
-	console.log("erin is freaking out");
+	console.log("Catrin is freaking out");
 	handleBold(el)
-	mediaType.text('Freakout engaged, Chris is being notified... hang tight, deep breaths!')
+	mediaType.text('Freakout engaged, Lo is being notified... hang tight, deep breaths!')
 
 	player[0].pause()
 
@@ -105,7 +116,7 @@ function freakout(el){
 }
 
 function playPauseClicked(el){
-	console.log("erin pressed play/pause");
+	console.log("Catrin pressed play/pause");
 	// console.log('el:', el);
 
 	// find icon that ISN'T hidden
@@ -146,7 +157,7 @@ function playPauseClicked(el){
 }
 
 function nextClicked(){
-	console.log('erin clicked next');
+	console.log('Catrin clicked next');
 
 	if (currentMediaType === "song") {
 			// incrememnt currentSongIndex
@@ -169,7 +180,7 @@ function nextClicked(){
 }
 
 function prevClicked(){
-	console.log("Erin clicked previous")
+	console.log("Catrin clicked previous")
 
 	if (currentMediaType === "song"){
 		currentSongIndex--;
@@ -212,8 +223,8 @@ function sendPush(){
 		"active": "true",
 		"type": "note",
 		"title": "HELP",
-		"body": "Shit is hitting Erins fan!",
-		"email": "chrisdermody1@gmail.com"
+		"body": "Shit is hitting Catrins fan!",
+		"email": "lo.ranta86@gmail.com"
 	}
 
 	let headers = {
@@ -224,7 +235,7 @@ function sendPush(){
 	         data: JSON.stringify(push),
 	         type: "POST",
 	         beforeSend: function(xhr){xhr.setRequestHeader('Access-Token', 'o.TWdGpN5eMfbFJ6aex5vjmgd9A2qsX6IT').setRequestHeader('Content-Type','application/json');},
-	         success: function() { alert("I've been notified darlin, will call as soon as I can! Kisses"); }
+	         success: function() { alert("I've been notified darling, will call as soon as I can! Kisses"); }
 	      });
 }
 
