@@ -4,5 +4,23 @@
     "nodemailer": "^6.6.0",
     "smtp": "^0.1.4",
     "twilio": "^3.62.0"
-  }
+  },
+  "name": "catrin",
+  "version": "1.0.0",
+  "main": "jquery.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rantaa/Catrin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rantaa/Catrin/issues"
+  },
+  "homepage": "https://github.com/Rantaa/Catrin#readme",
+  "description": ""
 }
