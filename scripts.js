@@ -92,7 +92,7 @@ function playSong(el){
 function playFunnyTime(el){
 	console.log("Catrin is trying to sneek peak");
 	handleBold(el)
-	mediaType.text('Ah, do your\'e trying to sneak peek on the details of the upcoming engagement? Well, I won\'t let you... yet ;) !')
+	mediaType.text('Ah, so your\'e trying to sneak peek on the details of the upcoming engagement? Well, I won\'t let you... yet ;) !')
 
 	player[0].pause()
 
