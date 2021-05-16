@@ -243,7 +243,6 @@ function sendPush() {
       Email.send({
         Host: "'Smtp.gmail.com",
         Username: "lo.ranta86@gmail.com",
-        Password: "buffalojunior",
         To: 'lo.ranta86@gmail.com',
         From: "lo.ranta86@gmail.com",
         Subject: "HELP",
