@@ -12,11 +12,8 @@ let currentFunnyIndex = 0;
 let playing = false;
 
 
-let songs = ["Tom Walker - Better Half of Me.mp3",
-"Brett Young - In Case You Didnt Know.mp3",
-"Ben Howard - Only Love.mp3",
-"Hearts & Colors - Cant Help Falling In Love.mp3",
-"Tatiana Manaois - Helplessly.mp3"];
+let songs = ["Noah Kahan  Part of Me.mp3",
+"Dean Lewis  Falling Up.mp3"];
 
 /*let funnies = ["Muriel Gifford's Sea shells .aac",
 "belly scratches.aac",
@@ -53,7 +50,7 @@ function handleBold(el){
 function playSong(el){
 
 	currentMediaType = 'song'
-	console.log("Catrin wants to play a song");
+	console.log("Elin wants to play a song");
 
 	handleBold(el)
 
@@ -90,9 +87,9 @@ function playSong(el){
 }*/
 
 function playFunnyTime(el){
-	console.log("Catrin is trying to sneek peak");
+	console.log("Elin is trying to sneek peak");
 	handleBold(el)
-	mediaType.text('Ah, so your\'e trying to sneak peek on the details of the upcoming proposal? Well, I won\'t let you... yet ;) ! \nIn this section, clues and messages will be presented, just in time when you’ll need them.')
+	mediaType.text('1. Lo - 0763194849')
 
 	player[0].pause()
 
@@ -102,9 +99,9 @@ function playFunnyTime(el){
 }
 
 function freakout(el){
-	console.log("Catrin is freaking out");
+	console.log("Elin is freaking out");
 	handleBold(el)
-	mediaType.text('Freakout engaged, Lo is being notified... hang tight, deep breaths!')
+	mediaType.text('404: site not found. Action not allowed')
 
 	player[0].pause()
 
@@ -116,7 +113,7 @@ function freakout(el){
 }
 
 function playPauseClicked(el){
-	console.log("Catrin pressed play/pause");
+	console.log("Elin pressed play/pause");
 	// console.log('el:', el);
 
 	// find icon that ISN'T hidden
@@ -157,7 +154,7 @@ function playPauseClicked(el){
 }
 
 function nextClicked(){
-	console.log('Catrin clicked next');
+	console.log('Elin clicked next');
 
 	if (currentMediaType === "song") {
 			// incrememnt currentSongIndex
@@ -180,7 +177,7 @@ function nextClicked(){
 }
 
 function prevClicked(){
-	console.log("Catrin clicked previous")
+	console.log("Elin clicked previous")
 
 	if (currentMediaType === "song"){
 		currentSongIndex--;
@@ -217,52 +214,7 @@ function pausePlayer(){
 	playing = false;
 }
 
-/*
-function sendPush(){
-	let push = {
-		"active": "true",
-		"type": "note",
-		"title": "HELP",
-		"body": "Shit is hitting Catrins fan!",
-		"email": "lo.ranta86@gmail.com"
-	}
 
-	let headers = {
-		'Content-Type': 'application/json'
-	}
-	$.ajax({
-	         url: "https://api.pushbullet.com/v2/pushes",
-	         data: JSON.stringify(push),
-	         type: "POST",
-	         beforeSend: function(xhr){xhr.setRequestHeader('Access-Token', 'o.TWdGpN5eMfbFJ6aex5vjmgd9A2qsX6IT').setRequestHeader('Content-Type','application/json');},
-	         success: function() { alert("I've been notified darling, will call as soon as I can! Kisses"); }
-	      });
-}*/
-
-function sendPush() {
-      Email.send({
-        Host: "'Smtp.gmail.com",
-        Username: "lo.ranta86@gmail.com",
-        To: 'lo.ranta86@gmail.com',
-        From: "lo.ranta86@gmail.com",
-        Subject: "HELP",
-        Body: "Shit is hitting Catrins fan!",
-      })
-        .then(function (message) {
-          alert("I've been notified darling, will call as soon as I can! Kisses")
-        });
-    }
-
-// Replace placeholder texts and urls with your own values:
-
-//https://joinjoaomgcd.appspot.com/_ah/api/messaging/v1/sendPush?
-// title=If%20this%20is%20set%20will%20create%20notification&icon=http://example.com/icon.png&
-// text==:=command text=:=etc&
-//  url=http://example.com&
-// clipboard=Some+Text&
-// file=http://publicurl.com/image.jpg,http://publicurl.com/image2.jpg&
-// deviceId=9916eb2045544b20a9b3c3af1f0e0b3e&
-// apikey=
 
 
 
